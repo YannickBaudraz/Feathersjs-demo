@@ -26,6 +26,13 @@
     "local": {
       "usernameField": "email",
       "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/",
+      "github": {
+        "key": "bc6a5b3c49205815165d",
+        "secret": "e5584466b2772692550a590ccbfee1f1ac27e3de"
+      }
     }
   },
   "nedb": "../data"
