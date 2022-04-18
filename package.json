@@ -1,0 +1,17 @@
+{
+  "name": "featherjs-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@feathersjs/express": "^4.5.14",
+    "@feathersjs/feathers": "^4.5.12",
+    "@feathersjs/socketio": "^4.5.14"
+  }
+}
