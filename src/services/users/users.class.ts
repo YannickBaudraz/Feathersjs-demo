@@ -1,7 +1,6 @@
 import crypto from 'crypto';
 import {Params} from '@feathersjs/feathers';
 import {NedbServiceOptions, Service} from 'feathers-nedb';
-import {Application} from '../../declarations';
 
 // The Gravatar image service
 const gravatarUrl = 'https://s.gravatar.com/avatar';
@@ -15,10 +14,10 @@ const getGravatar = (email: string) => {
   const hash = crypto.createHash('md5').update(email.toLowerCase()).digest('hex');
   // Return the full avatar URL
   return `${gravatarUrl}/${hash}?${query}`;
-}
+};
 
 // A type interface for our user (it does not validate any data)
-interface UserData {
+export interface UserData {
   _id?: string;
   email: string;
   password: string;
@@ -28,8 +27,7 @@ interface UserData {
 }
 
 export class Users extends Service<UserData> {
-  //eslint-disable-next-line @typescript-eslint/no-unused-vars
-  constructor(options: Partial<NedbServiceOptions>, app: Application) {
+  constructor(options: Partial<NedbServiceOptions>) {
     super(options);
   }
 
